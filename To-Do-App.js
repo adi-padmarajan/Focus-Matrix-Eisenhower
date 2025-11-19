@@ -9,7 +9,7 @@ function renderTodoList(){
         const html = `<p>${toDo}</p>`;
         todoListHTML += html;
     }
-    console.log(todoListHTML);
+    //console.log(todoListHTML);
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
 }
 
@@ -17,7 +17,7 @@ function addTodo(){
     const inputElement = document.querySelector('.js-name-input');
     const name = inputElement.value;
     todoList.push(name);
-    console.log(todoList);
+    //console.log(todoList);
     inputElement.value = ''; //To Clear the input text box once the task has been added
     renderTodoList();
 }
