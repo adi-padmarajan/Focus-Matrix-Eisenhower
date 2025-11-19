@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do Task and Scheduling App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href = "To-Do-App.css">
 </head>
 <body>
-    <p>Schedule Your Tasks</p>
+    <h2 class = "app-title">Task Scheduling</h2>
+    <h4 class = "app-sub-title">Schedule your tasks with Dates</h4>
     <div class = "todo-input-grid">
-        <input placeholder = "Task Name" class = "js-name-input"> 
+        <input placeholder = "Task Name" class = "js-name-input name-input"> 
         <input type = "date" class = "js-due-date-input">
         <button onclick = "addTodo();">Add</button>
     </div>
