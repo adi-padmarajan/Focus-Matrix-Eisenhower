@@ -1,4 +1,8 @@
 const todoList = [];
+const quadrant1 = []; //Important and Urgent
+const quadrant2 = []; //Important but Not Urgent
+const quadrant3 = []; //Urgent but Not Important
+const quadrant4 = []; //Not Urgent and Not Important
 
 renderTodoList();
 
@@ -24,6 +28,7 @@ function renderTodoList(){
             </button> 
             <button
                 class=" w-full add-to-matrix bg-amber-500 hover:bg-amber-600 text-white rounded px-3 py-2 text-xs font-medium"
+                onclick = "addToMatrix(${i});"
             >
                 Add to Matrix
             </button>
@@ -53,5 +58,21 @@ function checkEmptyTaskList(){
     }
     else{
         document.querySelector('.js-default-text').innerHTML = '';
+    }
+}
+
+function addToMatrix(index){
+    const todoObject = todoList[index];
+    if(todoObject.priority === 'Important and Urgent'){
+        quadrant1.push(todoObject);
+    }
+    else if(todoObject.priority === 'Important but Not Urgent'){
+        quadrant2.push(todoObject);
+    }
+    else if(todoObject.priority === 'Urgent but Not Important'){
+        quadrant3.push(todoObject);
+    }
+    else if(todoObject.priority === 'Not Urgent and Not Important'){
+        quadrant4.push(todoObject);
     }
 }
