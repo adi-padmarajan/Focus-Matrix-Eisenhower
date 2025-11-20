@@ -12,9 +12,14 @@
 </head>
 <body class="min-h-screen bg-slate-100 font-sans p-8">
     <h4 class = " text-2xl font-semibold mb-4 text-slate-800">Create Tasks</h4>
-    <div class = "todo-input-grid grid gap-4 items-stretch mb-6">
+    <div class = "todo-input-grid grid grid-cols-4 gap-4 items-stretch mb-6">
+        <!--Task-->
         <input placeholder = "Task Name" class = "js-name-input name-input border border-slate-300 rounded px-3 py-2 text-sm"> 
+
+        <!--Date-->
         <input type = "date" class = "js-due-date-input due-date-input border border-slate-300 rounded px-3 py-2 text-sm">
+
+        <!--Priority-->
         <select class = "js-prioritize-tag border border-slate-300 rounded px-3 py-2 text-sm">
             <option value="" disabled selected>Select Priority</option>
             <option>Important and Urgent</option>
@@ -22,11 +27,14 @@
             <option>Urgent but Not Important</option>
             <option>Not Urgent and Not Important</option>
         </select>
+
+        <!--Add to list-->
         <button onclick = "addTodo();" class = "add-todo-button bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded px-4 py-2 text-sm">Add to Task List</button>
     </div>
+
     <div class="js-your-tasks your-tasks bg-white rounded-lg shadow-sm border border-slate-200 p-4">
         <h4 class="text-lg font-semibold mb-3 text-slate-800">Your Tasks</h4>
-        <div class="js-todo-list todo-grid grid gap-3 text-sm"></div>
+        <div class="js-todo-list todo-grid grid grid-cols-5 gap-3 text-sm"></div>
     </div>
 
     <script src = "To-Do-App.js"></script>
