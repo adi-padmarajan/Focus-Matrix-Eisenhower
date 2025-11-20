@@ -32,11 +32,40 @@
         <button onclick = "addTodo();" class = "add-todo-button bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded px-4 py-2 text-sm">Add to Task List</button>
     </div>
 
-    <div class="js-your-tasks your-tasks bg-white rounded-lg shadow-sm border border-slate-200 p-4">
+    <div class="js-your-tasks your-tasks bg-white rounded-lg shadow-sm border border-slate-200 p-4 mb-5">
         <h4 class="text-lg font-semibold mb-3 text-slate-800">Your Tasks</h4>
         <div class = "js-default-text"></div>
         <div class="js-todo-list grid grid-cols-5 gap-3 text-sm place-items-center"></div>
     </div>
+
+    <!--Eisenhower Matrix-->
+    <h4 class = " text-2xl font-semibold mb-4 text-slate-800">Eisenhower Matrix</h4>
+    <div class="js-matrix grid grid-cols-2 grid-rows-2 gap-5">
+        <!-- Q1 -->
+        <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm min-h-40">
+            <h3 class="text-sm font-semibold text-emerald-600 mb-2">Important &amp; Urgent</h3>
+            <p class="text-xs text-slate-600">Tasks that need to be done now.</p>
+        </div>
+
+        <!-- Q2 -->
+        <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm min-h-40">
+            <h3 class="text-sm font-semibold text-emerald-600 mb-2">Important, Not Urgent</h3>
+            <p class="text-xs text-slate-600">Tasks to schedule and plan.</p>
+        </div>
+
+        <!-- Q3 -->
+        <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm min-h-40">
+            <h3 class="text-sm font-semibold text-amber-600 mb-2">Urgent, Not Important</h3>
+            <p class="text-xs text-slate-600">Tasks to delegate.</p>
+        </div>
+
+        <!-- Q4 -->
+        <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm min-h-40">
+            <h3 class="text-sm font-semibold text-rose-600 mb-2">Not Urgent &amp; Not Important</h3>
+            <p class="text-xs text-slate-600">Tasks to minimize or eliminate.</p>
+        </div>
+    </div>
+
 
     <script src = "To-Do-App.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
