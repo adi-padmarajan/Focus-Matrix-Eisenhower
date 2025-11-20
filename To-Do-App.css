@@ -19,7 +19,7 @@ body{
 }
 
 .add-todo-button{
-    background-color: green;
+    background-color: darkgreen;
     border: none;
     color: white;
     font-size: 15px;
@@ -35,3 +35,4 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
