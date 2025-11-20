@@ -12,27 +12,42 @@ function renderTodoList(){
     for(let i = 0; i < todoList.length; i++){
         const todoObject = todoList[i];
         const {name, dueDate, priority} = todoObject;
-        const html = `
-            <div class="text-slate-700 text-center">${name}</div> 
-            <div class="text-slate-500 text-center">${dueDate}</div>
-            <div class="text-slate-600 text-center">${priority}</div>
+       const html = `
+        <div class="flex w-full items-center justify-between gap-4 bg-white border border-slate-200 rounded-lg px-4 py-3 shadow-sm">
+            <div class="flex flex-col text-left">
+            <div class="text-sm font-semibold text-slate-800">
+                ${name}
+            </div>
+
+            <div class="mt-1 flex flex-wrap items-center gap-2 text-xs text-slate-500">
+                <span>${dueDate || 'No due date'}</span>
+                <span class="inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-700">
+                ${priority}
+                </span>
+            </div>
+            </div>
+
+            <div class="flex items-center gap-2">
             <button
                 onclick="
-                    todoList.splice(${i}, 1);
-                    renderTodoList();
-                    checkEmptyTaskList();
+                todoList.splice(${i}, 1);
+                renderTodoList();
                 "
-                class="w-full delete-todo-button bg-rose-600 hover:bg-rose-700 text-white rounded px-3 py-2 text-xs font-medium"
+                class="text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-3 py-1.5 font-medium"
             >
                 Delete
-            </button> 
+            </button>
+
             <button
-                class=" w-full add-to-matrix bg-amber-500 hover:bg-amber-600 text-white rounded px-3 py-2 text-xs font-medium"
-                onclick = "addToMatrix(${i});"
+                onclick="addToMatrix(${i});"
+                class="text-xs bg-amber-500 hover:bg-amber-600 text-white rounded px-3 py-1.5 font-medium"
             >
                 Add to Matrix
             </button>
+            </div>
+        </div>
         `;
+
         todoListHTML += html;
     }
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
@@ -119,28 +134,29 @@ function addToQuadrant2(){
         const quadObject = quadrant2[i];
         const {name, dueDate, priority} = quadObject;
         const html = `
-            <div class="flex items-center justify-between bg-emerald-50 border border-emerald-100 rounded-md px-3 py-2">
-                <div>
-                    <div class="text-sm font-medium text-slate-800">
-                        ${name}
-                    </div>
-                    <div class="text-xs text-slate-500">
-                        ${dueDate || 'No due date'}
-                    </div>
+            <div class="flex w-full items-center justify-between gap-3 bg-emerald-50 border border-emerald-100 rounded-md px-3 py-2">
+                <div class="flex flex-col text-left">
+                <div class="text-sm font-medium text-slate-800">
+                    ${name}
+                </div>
+                <div class="text-xs text-slate-500">
+                    ${dueDate || 'No due date'}
+                </div>
                 </div>
 
                 <button
-                    class="text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-2 py-1"
-                    onclick="
-                        quadrant2.splice(${i}, 1);
-                        addToQuadrant2();
-                    "
+                class="shrink-0 text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-3 py-1.5"
+                onclick="
+                    quadrant2.splice(${i}, 1);
+                    addToQuadrant2();
+                "
                 >
-                    Remove
+                Remove
                 </button>
             </div>
         `;
         quadListHTML += html;
+
     }
     document.querySelector('.js-quad2-input').innerHTML = quadListHTML;
 

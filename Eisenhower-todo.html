@@ -11,15 +11,23 @@
 </head>
 <body class="min-h-screen bg-slate-100 font-sans p-8">
     <h4 class = " text-2xl font-semibold mb-4 text-slate-800">Create Tasks</h4>
-    <div class = "todo-input-grid grid grid-cols-4 gap-4 items-stretch mb-6">
-        <!--Task-->
-        <input placeholder = "Task Name" class = "js-name-input border border-slate-300 rounded px-3 py-2 text-sm"> 
+    <div class="todo-input-grid grid grid-cols-1 gap-3 md:grid-cols-[2fr,1fr,1fr,auto] items-center mb-6">
+        <!-- Task -->
+        <input
+            placeholder="Task Name"
+            class="js-name-input w-full border border-slate-300 rounded px-3 py-2 text-sm"
+        >
 
-        <!--Date-->
-        <input type = "date" class = "js-due-date-input border border-slate-300 rounded px-3 py-2 text-sm">
+        <!-- Date -->
+        <input
+            type="date"
+            class="js-due-date-input w-full border border-slate-300 rounded px-3 py-2 text-sm"
+        >
 
-        <!--Priority-->
-        <select class = "js-prioritize-tag border border-slate-300 rounded px-3 py-2 text-sm">
+        <!-- Priority -->
+        <select
+            class="js-prioritize-tag w-full border border-slate-300 rounded px-3 py-2 text-sm"
+        >
             <option value="" disabled selected>Select Priority</option>
             <option>Important and Urgent</option>
             <option>Important but Not Urgent</option>
@@ -27,14 +35,21 @@
             <option>Not Urgent and Not Important</option>
         </select>
 
-        <!--Add to list-->
-        <button onclick = "addTodo();" class = "add-todo-button bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded px-4 py-2 text-sm">Add to Task List</button>
+        <!-- Add to list -->
+        <button
+            onclick="addTodo();"
+            class="add-todo-button bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded px-4 py-2 text-sm w-full md:w-auto"
+        >
+            Add to Task List
+        </button>
     </div>
+
 
     <div class="js-your-tasks your-tasks bg-white rounded-lg shadow-sm border border-slate-200 p-4 mb-5 min-h-40">
         <h4 class="text-lg font-semibold mb-3 text-slate-800">Your Tasks</h4>
         <div class = "js-default-text"></div>
-        <div class="js-todo-list grid grid-cols-5 gap-3 text-sm place-items-center"></div>
+        <div class="js-todo-list flex flex-col gap-3 text-sm"></div>
+
     </div>
 
     <!--Eisenhower Matrix-->
@@ -42,7 +57,7 @@
     <div class="js-matrix grid grid-cols-2 grid-rows-2 gap-5">
         <!-- Q1 -->
         <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm min-h-40">
-            <h3 class="text-sm font-semibold text-emerald-600 mb-2">Important &amp; Urgent</h3>
+            <h3 class="text-sm font-semibold text-blue-600 mb-2">Important &amp; Urgent</h3>
             <p class="text-xs text-slate-600">Tasks that need to be done now.</p>
 
             <div class = "js-quad1-input text-xs text-slate-300 grid grid-cols-2 gap-2"></div>
