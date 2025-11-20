@@ -1,1 +1,2 @@
-# Todo-App-JS
+# Focus Matrix – Task & Priority Planner
+
