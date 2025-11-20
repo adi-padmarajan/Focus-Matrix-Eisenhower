@@ -8,14 +8,23 @@ function renderTodoList(){
         const todoObject = todoList[i];
         const {name, dueDate, priority} = todoObject;
         const html = `
-            <div>${name}</div> 
-            <div>${dueDate}</div>
-            <div>${priority}</div>
-            <button onclick = "
-                todoList.splice(${i}, 1);
-                renderTodoList();
-            " class = "delete-todo-button">Delete</button> 
-            <button class = "add-to-matrix" >Add to Matrix</button>
+            <div class="text-slate-700">${name}</div> 
+            <div class="text-slate-500">${dueDate}</div>
+            <div class="text-slate-600">${priority}</div>
+            <button
+                onclick="
+                    todoList.splice(${i}, 1);
+                    renderTodoList();
+                "
+                class="delete-todo-button bg-rose-600 hover:bg-rose-700 text-white rounded px-3 py-2 text-xs font-medium"
+            >
+                Delete
+            </button> 
+            <button
+                class="add-to-matrix bg-amber-500 hover:bg-amber-600 text-white rounded px-3 py-2 text-xs font-medium"
+            >
+                Add to Matrix
+            </button>
         `;
         todoListHTML += html;
     }
