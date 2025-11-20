@@ -65,6 +65,7 @@ function addToMatrix(index){
     const todoObject = todoList[index];
     if(todoObject.priority === 'Important and Urgent'){
         quadrant1.push(todoObject);
+        addToQuadrant1();
     }
     else if(todoObject.priority === 'Important but Not Urgent'){
         quadrant2.push(todoObject);
@@ -75,4 +76,20 @@ function addToMatrix(index){
     else if(todoObject.priority === 'Not Urgent and Not Important'){
         quadrant4.push(todoObject);
     }
+}
+
+function addToQuadrant1(){
+
+}
+
+function addToQuadrant2(){
+
+}
+
+function addToQuadrant3(){
+
+}
+
+function addToQuadrant4(){
+    
 }
