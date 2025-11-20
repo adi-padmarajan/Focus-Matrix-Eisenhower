@@ -99,7 +99,10 @@ function addToQuadrant1(){
 
                 <button
                     class="text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-2 py-1"
-                    onclick="removeFromQuadrant1(${i})"
+                    onclick="
+                        quadrant1.splice(${i}, 1);
+                        addToQuadrant1();
+                    "
                 >
                     Remove
                 </button>
@@ -128,7 +131,10 @@ function addToQuadrant2(){
 
                 <button
                     class="text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-2 py-1"
-                    onclick="removeFromQuadrant2(${i})"
+                    onclick="
+                        quadrant2.splice(${i}, 1);
+                        addToQuadrant2();
+                    "
                 >
                     Remove
                 </button>
@@ -158,7 +164,10 @@ function addToQuadrant3(){
 
                 <button
                     class="text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-2 py-1"
-                    onclick="removeFromQuadrant3(${i})"
+                    onclick="
+                        quadrant3.splice(${i}, 1);
+                        addToQuadrant3();
+                    "
                 >
                     Remove
                 </button>
@@ -187,7 +196,10 @@ function addToQuadrant4(){
 
                 <button
                     class="text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-2 py-1"
-                    onclick="removeFromQuadrant4(${i})"
+                    onclick="
+                        quadrant4.splice(${i}, 1);
+                        addToQuadrant4();
+                    "
                 >
                     Remove
                 </button>
