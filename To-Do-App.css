@@ -4,7 +4,7 @@ body{
 
 .todo-grid, .todo-input-grid{
     display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px 200px 200px;
     column-gap: 20px;
     row-gap: 20px;
     align-items: center;
@@ -27,7 +27,17 @@ body{
 }
 
 .delete-todo-button{
-    background-color: darkred;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.add-to-matrix{
+    background-color: darkorange;
     color: white;
     border: none;
     font-size: 15px;

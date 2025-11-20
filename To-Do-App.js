@@ -15,6 +15,7 @@ function renderTodoList(){
                 todoList.splice(${i}, 1);
                 renderTodoList();
             " class = "delete-todo-button">Delete</button> 
+            <button class = "add-to-matrix" >Add to Matrix</button>
         `;
         todoListHTML += html;
     }
