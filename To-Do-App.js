@@ -69,27 +69,131 @@ function addToMatrix(index){
     }
     else if(todoObject.priority === 'Important but Not Urgent'){
         quadrant2.push(todoObject);
+        addToQuadrant2();
     }
     else if(todoObject.priority === 'Urgent but Not Important'){
         quadrant3.push(todoObject);
+        addToQuadrant3();
     }
     else if(todoObject.priority === 'Not Urgent and Not Important'){
         quadrant4.push(todoObject);
+        addToQuadrant4();
     }
 }
 
 function addToQuadrant1(){
+    let quadListHTML = '';
+    for(let i = 0; i < quadrant1.length; i++){
+        const quadObject = quadrant1[i];
+        const {name, dueDate, priority} = quadObject;
+        const html = `
+            <div class="flex items-center justify-between bg-emerald-50 border border-emerald-100 rounded-md px-3 py-2">
+                <div>
+                    <div class="text-sm font-medium text-slate-800">
+                        ${name}
+                    </div>
+                    <div class="text-xs text-slate-500">
+                        ${dueDate || 'No due date'}
+                    </div>
+                </div>
 
+                <button
+                    class="text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-2 py-1"
+                    onclick="removeFromQuadrant1(${i})"
+                >
+                    Remove
+                </button>
+            </div>
+        `;
+        quadListHTML += html;
+    }
+    document.querySelector('.js-quad1-input').innerHTML = quadListHTML;
 }
 
 function addToQuadrant2(){
+    let quadListHTML = '';
+    for(let i = 0; i < quadrant2.length; i++){
+        const quadObject = quadrant2[i];
+        const {name, dueDate, priority} = quadObject;
+        const html = `
+            <div class="flex items-center justify-between bg-emerald-50 border border-emerald-100 rounded-md px-3 py-2">
+                <div>
+                    <div class="text-sm font-medium text-slate-800">
+                        ${name}
+                    </div>
+                    <div class="text-xs text-slate-500">
+                        ${dueDate || 'No due date'}
+                    </div>
+                </div>
+
+                <button
+                    class="text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-2 py-1"
+                    onclick="removeFromQuadrant2(${i})"
+                >
+                    Remove
+                </button>
+            </div>
+        `;
+        quadListHTML += html;
+    }
+    document.querySelector('.js-quad2-input').innerHTML = quadListHTML;
 
 }
 
 function addToQuadrant3(){
+    let quadListHTML = '';
+    for(let i = 0; i < quadrant3.length; i++){
+        const quadObject = quadrant3[i];
+        const {name, dueDate, priority} = quadObject;
+        const html = `
+            <div class="flex items-center justify-between bg-emerald-50 border border-emerald-100 rounded-md px-3 py-2">
+                <div>
+                    <div class="text-sm font-medium text-slate-800">
+                        ${name}
+                    </div>
+                    <div class="text-xs text-slate-500">
+                        ${dueDate || 'No due date'}
+                    </div>
+                </div>
 
+                <button
+                    class="text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-2 py-1"
+                    onclick="removeFromQuadrant3(${i})"
+                >
+                    Remove
+                </button>
+            </div>
+        `;
+        quadListHTML += html;
+    }
+    document.querySelector('.js-quad3-input').innerHTML = quadListHTML;
 }
 
 function addToQuadrant4(){
-    
+    let quadListHTML = '';
+    for(let i = 0; i < quadrant4.length; i++){
+        const quadObject = quadrant4[i];
+        const {name, dueDate, priority} = quadObject;
+        const html = `
+            <div class="flex items-center justify-between bg-emerald-50 border border-emerald-100 rounded-md px-3 py-2">
+                <div>
+                    <div class="text-sm font-medium text-slate-800">
+                        ${name}
+                    </div>
+                    <div class="text-xs text-slate-500">
+                        ${dueDate || 'No due date'}
+                    </div>
+                </div>
+
+                <button
+                    class="text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-2 py-1"
+                    onclick="removeFromQuadrant4(${i})"
+                >
+                    Remove
+                </button>
+            </div>
+        `;
+        quadListHTML += html;
+    }
+    document.querySelector('.js-quad4-input').innerHTML = quadListHTML;
 }
