@@ -46,3 +46,12 @@ body{
     padding-bottom: 10px;
 }
 
+.your-tasks{
+    border: 2px;
+    border-color: lightgray;
+    border-radius: 5px;
+    border-style: solid;
+    padding: 10px 20px;
+}
+
+
