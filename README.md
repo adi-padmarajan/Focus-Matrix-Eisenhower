@@ -1,6 +1,6 @@
 # Focus Matrix – Task & Priority Planner
 
-A simple UI, clean, browser-based task manager that helps you **schedule tasks** and sort them into an **Eisenhower Matrix** based on urgency and importance. Built with **HTML5**, **Vanilla JavaScript**, and **Tailwind CSS**.   
+A clean UI, browser-based task manager that helps you **schedule tasks** and sort them into an **Eisenhower Matrix** based on urgency and importance. Built with **HTML5**, **Vanilla JavaScript**, and **Tailwind CSS**.   
 
 ## UI Preview
 
