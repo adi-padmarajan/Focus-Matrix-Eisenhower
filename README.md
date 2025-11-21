@@ -8,5 +8,5 @@ A simple UI, clean, browser-based task manager that helps you **capture tasks** 
 
 <img src = "create_tasks.png" alt = "Create Tasks">
 
-<img src = "Eisenhower-todo.js" alt = "Eisenhower Matrix">
+<img src = "Eisenhower.png" alt = "Eisenhower Matrix">
 
