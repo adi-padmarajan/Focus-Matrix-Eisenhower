@@ -12,41 +12,41 @@ function renderTodoList(){
     for(let i = 0; i < todoList.length; i++){
         const todoObject = todoList[i];
         const {name, dueDate, priority} = todoObject;
-       const html = `
-        <div class="flex w-full items-center justify-between gap-4 bg-white border border-slate-200 rounded-lg px-4 py-3 shadow-sm">
-            <div class="flex flex-col text-left">
-            <div class="text-sm font-semibold text-slate-800">
-                ${name}
-            </div>
+        const html = `
+            <div class="flex w-full items-center justify-between gap-4 bg-white border border-slate-200 rounded-lg px-4 py-3 shadow-sm">
+                <div class="flex flex-col text-left">
+                <div class="text-sm font-semibold text-slate-800">
+                    ${name}
+                </div>
 
-            <div class="mt-1 flex flex-wrap items-center gap-2 text-xs text-slate-500">
-                <span>${dueDate || 'No due date'}</span>
-                <span class="inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-700">
-                ${priority}
-                </span>
-            </div>
-            </div>
+                <div class="mt-1 flex flex-wrap items-center gap-2 text-xs text-slate-500">
+                    <span>${dueDate || 'No due date'}</span>
+                    <span class="inline-flex items-center rounded-full bg-slate-100 px-2 py-0.5 text-[11px] font-medium text-slate-700">
+                    ${priority}
+                    </span>
+                </div>
+                </div>
 
-            <div class="flex items-center gap-2">
-            <button
-                onclick="
-                todoList.splice(${i}, 1);
-                renderTodoList();
-                "
-                class="text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-3 py-1.5 font-medium"
-            >
-                Delete
-            </button>
+                <div class="flex items-center gap-2">
+                <button
+                    onclick="
+                    todoList.splice(${i}, 1);
+                    renderTodoList();
+                    "
+                    class="text-xs bg-rose-600 hover:bg-rose-700 text-white rounded px-3 py-1.5 font-medium"
+                >
+                    Delete
+                </button>
 
-            <button
-                onclick="addToMatrix(${i});"
-                class="text-xs bg-amber-500 hover:bg-amber-600 text-white rounded px-3 py-1.5 font-medium"
-            >
-                Add to Matrix
-            </button>
+                <button
+                    onclick="addToMatrix(${i});"
+                    class="text-xs bg-amber-500 hover:bg-amber-600 text-white rounded px-3 py-1.5 font-medium"
+                >
+                    Add to Matrix
+                </button>
+                </div>
             </div>
-        </div>
-        `;
+            `;
 
         todoListHTML += html;
     }
